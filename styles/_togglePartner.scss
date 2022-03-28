@@ -1,0 +1,13 @@
+.toggle-main {
+    position: relative;
+
+    h2 {
+        margin-left: 2.8rem;
+    }
+
+    svg {
+        position: absolute;
+        transform: translate(-45px, 5px) scale(1.4);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,121 @@
+@mixin thumbnail-styling {
+    opacity: 1;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    svg {
+        position: absolute;
+        transform: scale(3);
+        display: none;     
+        transition: all 0.3s ease;   
+    }
+
+    &:hover {
+        transform: scale(0.99);
+        background-color: (0, 0, 0, 0.9);
+        opacity: 0.9;
+
+        svg {
+            display: flex;     
+        }
+    }
+}
+
+.properties-main {
+    padding: 2.5rem 10% 0rem;
+
+    h1 {
+        width: max-content;
+        border-bottom: 0.5px solid $main-golden;
+        border-width: max-content;
+        line-height: 120%;
+        margin-top: 0;
+    }
+
+    p {
+        text-align: justify;
+        font-size: 105%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.5rem;
+        width: 100%;
+        margin-top: 1.4rem;
+        margin-bottom: 3rem;        
+
+        & > div {
+            height: 12rem;
+            background: url('../public/img/properties/properties-main-bg.jpg');
+            background-attachment: fixed;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+        }
+
+        a {
+            .property1 {
+                background: url('../public/img/properties/thmb-1.jpg');
+                background-size: cover;
+                @include thumbnail-styling();
+            }
+            .property2 {
+                background: url('../public/img/properties/thmb-2.jpg');
+                background-size: cover;
+                @include thumbnail-styling();
+            }
+            .property3 {
+                background: url('../public/img/properties/thmb-3.jpg');
+                background-size: cover;
+                @include thumbnail-styling();
+            }
+            .property4 {
+                background: url('../public/img/properties/thmb-4.jpg');
+                background-size: cover;
+                @include thumbnail-styling();
+            }
+            .property5 {
+                background: url('../public/img/properties/thmb-5.jpg');
+                background-size: cover;
+                @include thumbnail-styling();
+            }
+            .property6 {
+                background: url('../public/img/properties/thmb-6.jpg');
+                background-size: cover;
+                @include thumbnail-styling();
+            }
+        }        
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .properties-main {
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+            grid-gap: 0.8rem;
+
+            .bg1 {
+                display: none;
+            }
+            
+            .property1,.property2,.property3,.property4,.property5,.property6 {
+                position: relative;
+                min-height: 400px;
+
+                svg {
+                    position: absolute;
+                    display: flex !important;
+                    transform: scale(3);
+                    opacity: 0.8;                    
+                }
+            }
+        }
+    }    
+}

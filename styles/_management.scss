@@ -1,0 +1,59 @@
+.management-main {
+    padding: 2.5rem 10% 0rem;
+
+    h1 {
+        width: max-content;
+        border-bottom: 0.5px solid $main-golden;
+        border-width: max-content;
+        line-height: 120%;
+        margin: 0 0 2rem 0;
+    }
+
+    .colleagues-h1 {
+        font-size: 28px;
+        width: max-content;
+        border-bottom: 0.5px solid $lavender;
+        border-width: max-content;
+        line-height: 120%;
+        margin: 3rem 0 0 0;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: -5rem;
+    }
+}
+
+.management-colleagues {
+    .colleagues-img {
+        filter: sepia(20%);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .management-main {
+        .management-colleagues {
+            h1 {
+                margin-top: 0;
+            }
+        }
+
+        p {
+            margin-bottom: -2.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .management-main {
+        .management-colleagues {
+            h1 {
+                margin-top: 0;
+            }
+        }
+
+        p {
+            margin-bottom: -1rem;
+        }
+    }
+}

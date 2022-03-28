@@ -1,0 +1,187 @@
+.contact-container {
+    
+    .contact-header {
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .contact-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form {
+        width: 40%;
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input, textarea {
+            background: #eee;
+            display: block;
+            font: inherit;
+            color: #010101;
+            padding: 0.25rem;
+            width: 100%;
+            margin-bottom: 0.5rem;
+            resize: none;
+            &:focus {
+                outline: none;
+            }
+        }
+        .form-button {
+            display: flex;
+            justify-content: center;
+            button {                
+                border: 1px solid $secondary-golden;
+                background: transparent;
+                color: $text-white;
+                font-weight: bolder;
+                font-size: 0.9rem;
+                letter-spacing: 0.1rem;
+                padding: 1rem 3rem;
+                cursor: pointer;
+                margin-top: 0.2rem;
+                margin-bottom: 2rem;
+            }
+        }        
+    }   
+
+    .contact-addr-container {
+        display: flex;
+        margin: 0 auto;
+        width: 70%;
+        padding: 3rem;
+
+        .addr-left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding-right: 4rem;
+
+            h3 {
+                margin-bottom: 0;
+            }
+        }
+        .addr-center-img-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .addr-img {
+                border-radius: 10px;
+            }
+        }
+        .addr-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding-left: 4rem;
+
+            h3 {
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .contact-phone {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+
+        .border-div {
+            width: 40%;
+            height: max-content;
+            border: 1px solid $green;
+            border-radius: 10px;
+            margin-bottom: 5rem;
+
+            display: flex;
+            position: relative;
+
+            .phone-main {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+            }
+
+            .vr-line-golden {
+                position: absolute;
+                top: 15%;
+                left: 50%;
+                transform: translate (-50%, 50%);
+                width: 1px;
+                height: 70%;
+                background: $main-golden;
+            }
+
+            .phone-worldwide {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+            }
+
+            h3 {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact-container {
+        .contact-addr-container {
+            flex-direction: column;
+            padding: 5% 0 10%;
+            margin: 0 auto;
+
+            .addr-left, .addr-right {
+                padding: 0;
+            }
+        }
+
+        .contact-phone {
+            .border-div {
+                width: 80%;
+                margin-bottom: 3rem;
+
+                .phone-main, .phone-worldwide {
+                    text-align: center;
+                }
+            }
+        }
+    }
+   
+    .contact-form {
+        form {
+            width: 80%;
+
+            textarea {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+@import './colors';
+@import './navbar';
+@import './hero';
+@import './about-us';
+@import './properties';
+@import './propertyDetails';
+@import './carousel';
+@import './management';
+@import './togglePartner';
+@import './partner';
+@import './contact';
+@import './footer';
+
+$font-base: "Poppins", sans-serif;
+
+* {
+    box-sizing: border-box;
+  }
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $font-base;
+    font-weight: 300;
+    background: $bg-black;
+    color: $text-white;
+
+    &::-webkit-scrollbar {
+        width: 0.6rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #E0E0E0;
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: white;
+    }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+hr {
+    border: none;
+    margin: 0 auto;
+    height: 0.2px;
+    width: 80%;
+    background: $lavender;
+}

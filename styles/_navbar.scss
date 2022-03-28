@@ -1,0 +1,125 @@
+@import '../styles//colors';
+
+nav {
+    border-bottom: 1px solid $green;
+}
+
+.navbar-main {
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 10%;
+
+    h1 {
+        transform: scale(1.3);
+    }
+
+    ul {
+        display: flex;        
+    }
+
+    li {
+        padding-left: 3rem;
+        position: relative;
+        font-size: 1.2rem;
+        font-weight: lighter;
+        letter-spacing: 0.02rem;
+    }
+}
+
+.navbar-smscreen {
+    display: none;
+
+    .hamburger-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        z-index: 5;
+        background: $bg-black;
+
+        .overlay-close {
+            font-size: 2rem;
+            font-weight: bold;
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            color: $text-white !important;
+        }
+    }
+}  
+
+
+@media screen and (max-width: 900px) {
+    .main-ul{
+        li {
+            display: none;
+        }
+    }
+    .navbar-smscreen {
+        display: flex;
+
+        svg {
+            cursor: pointer;
+        }
+
+        path {
+            color: $text-white !important;         
+        }
+
+        .hamburger-overlay {
+            display: flex;
+            justify-content: center;
+            
+            svg {
+                cursor: pointer;
+            }
+            .overlay-close {
+                color: white;
+            }
+
+            ul {
+                flex-direction: column;               
+                align-items: center;
+                padding-inline-start: 0;
+                
+                li {
+                    padding: 4rem 0;
+                    cursor: pointer;
+                    transform: scale(1.6);
+
+                    a {
+                        width: max-content;
+                        border-bottom: 0.5px solid $main-golden;
+                        border-width: max-content;
+                        line-height: 120%;
+                        margin: 0;
+                    }                    
+                }
+            }
+        }       
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar-main {
+        h1 {
+            padding-left: 5%;
+        }
+    }
+
+    .navbar-smscreen {
+        .hamburger-overlay {
+            ul {
+                li {
+                    padding: 2rem;
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+}
